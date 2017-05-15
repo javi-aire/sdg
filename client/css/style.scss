@@ -52,8 +52,10 @@ table {
   top: 4.70em;
   width: 80%;
   margin: 0 auto;
-  border: 1px solid black;
-  clear: both
+  clear: both;
+  padding: 2.375em 0 2.375em 0;
+  text-align: center;
+
 }
 
 
@@ -63,8 +65,9 @@ table {
 
   & .tab_label {
     position: relative;
-    padding: .625em;
+    padding: .625em 7.15em .625em 0em;
     background: #fff;
+    border: 1px solid black;
     margin-left: -.062em;
     left: .062em;
   }
@@ -91,7 +94,7 @@ table {
   position: absolute;
   background: white;
   overflow: hidden;
-  top: 1.75em;
+  top: 8.75em;
   left: 0;
   right: 0;
   bottom: 0;

@@ -1,0 +1,99 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-family: "Helvetica", "Georgia";
+  line-height: 1;
+  margin: 0 auto;
+  width: 42.25em;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*======= Tab Container ======*/
+.tab-container {
+  position: relative;
+  top: 4.70em;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  clear: both
+}
+
+
+/*====== Tabs ======*/
+.tab {
+  float: left;
+
+  & label {
+    position: relative;
+    padding: .625em;
+    background: #fff;
+    margin-left: -.062em;
+    left: .062em;
+  }
+}
+
+[type=radio] {
+  display: none;
+
+
+  &:checked ~ label{
+    z-index: 2;
+    background: #000;
+    color: #fff;
+  }
+
+  &:checked ~ label ~ .tab_content {
+    z-index: 1;
+  }
+}
+
+
+/* padding is causing lower text lines to be displayed */
+.tab_content {
+  position: absolute;
+  background: white;
+  overflow: hidden;
+  top: 1.75em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25em;
+}

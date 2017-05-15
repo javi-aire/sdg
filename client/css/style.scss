@@ -61,7 +61,7 @@ table {
 .tab {
   float: left;
 
-  & label {
+  & .tab_label {
     position: relative;
     padding: .625em;
     background: #fff;
@@ -74,13 +74,13 @@ table {
   display: none;
 
 
-  &:checked ~ label{
+  &:checked ~ .tab_label {
     z-index: 2;
     background: #000;
     color: #fff;
   }
 
-  &:checked ~ label ~ .tab_content {
+  &:checked ~ .tab_label ~ .tab_content {
     z-index: 1;
   }
 }

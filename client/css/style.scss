@@ -28,6 +28,10 @@ body {
   line-height: 1;
   margin: 0 auto;
   width: 41.25em;
+
+  @media screen and (max-width: 39.06em){
+    width: 20em;
+  }
 }
 ol, ul {
   list-style: none;
@@ -55,6 +59,13 @@ table {
   padding: 1.38em 1.75em 2.38em 2.75em;
   text-align: center;
 
+  @media screen and (max-width: 39.06em){
+    overflow: hidden;
+    width: initial;
+    padding: 0;
+    font-size: 0.875em;
+  }
+
 }
 
 
@@ -65,26 +76,57 @@ table {
   & .tab_label {
     position: relative;
     background: #fff;
-    border: 1px solid black;
+    border: 1px solid #000;
     margin-right: -.1em;
     left: .062em;
+    transition: all linear 0.15s;
     font-size: 1.13em;
     text-transform: uppercase;
     letter-spacing: .1em;
 
-    &--fit-guide{
+
+    &--fit-guide {
       padding: 0.42em 2.1em 0.42em 2.1em;
 
     }
 
-    &--care{
+    &--care {
       padding: 0.42em 3.35em 0.42em 3.35em;
 
     }
 
-    &--materials{
+    &--materials {
       padding: 0.42em 1.75em 0.42em 1.65em;
+    }
+  }
 
+  & .tab_accordion {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 39.06em){
+    float: none;
+    text-align: left;
+    margin-top: 1em;
+    border-bottom: 1px solid #000;
+
+    & .tab_label {
+      padding: 0; /*15px;*/
+      display: inline-block;
+      margin-top: -0.1em;
+      border: none;
+    }
+
+    & .tab_accordion {
+      display: inline;
+      position: relative;
+      bottom: .1em;
+      left: 14.35em;
+
+      &--care-tab {
+
+      }
     }
   }
 }
@@ -97,6 +139,11 @@ table {
     z-index: 2;
     background: #000;
     color: #fff;
+
+    @media screen and (max-width: 39.06em){
+      background: none;
+      color: #000;
+    }
   }
 
   &:checked ~ .tab_label ~ .tab_content {
@@ -114,6 +161,11 @@ table {
   right: 0;
   bottom: 0;
   padding: 1.25em;
+
+  @media screen and (max-width: 39.06em){
+    display: none;
+    padding: .9375em;
+  }
 }
 
 /*

@@ -52,7 +52,7 @@ table {
   width: 85%;
   margin: 0 auto;
   clear: both;
-  padding: 1.38em 1.75em 2.38em 3.75em;
+  padding: 1.38em 1.75em 2.38em 2.75em;
   text-align: center;
 
 }
@@ -66,24 +66,24 @@ table {
     position: relative;
     background: #fff;
     border: 1px solid black;
-    margin-left: -.5em;
+    margin-right: -.1em;
     left: .062em;
     font-size: 1.13em;
     text-transform: uppercase;
     letter-spacing: .1em;
 
     &--fit-guide{
-      padding: 0.42em 1.9em 0.42em 1.95em;
+      padding: 0.42em 2.1em 0.42em 2.1em;
 
     }
 
     &--care{
-      padding: 0.42em 3.3em 0.42em 3.3em;
+      padding: 0.42em 3.35em 0.42em 3.35em;
 
     }
 
     &--materials{
-      padding: 0.42em 1.55em 0.42em 1.54em;
+      padding: 0.42em 1.75em 0.42em 1.65em;
 
     }
   }

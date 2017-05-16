@@ -105,14 +105,22 @@ table {
 }
 
 
-/* padding is causing lower text lines to be displayed */
 .tab_content {
   position: absolute;
   background: white; /* necessary to hide other tab_content */
   overflow: hidden;
-  top: 8.75em;
+  top: 8.05em;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 1.25em;
 }
+
+/*
+======For actual content styling======
+    padding-bottom: 6em;
+    font-size: .81em;
+    width: 52vw;
+    margin-left: -4vw;
+    letter-spacing: .0625em;
+*/

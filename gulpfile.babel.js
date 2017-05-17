@@ -44,15 +44,15 @@ gulp.task('html', ['sass'], () => {
     .pipe(gulp.dest(`${paths.dest}/`));
 });
 
-// /**
-// * compile and minify JS (even though there isn't any)
-// */
-// gulp.task('babel', () => {
-//   return gulp.src(paths.js)
-//     .pipe(babel())
-//     .pipe(jsMin())
-//     .pipe(gulp.dest(`${paths.dest}/js`));
-// });
+/**
+* compile and minify JS (even though there isn't any)
+*/
+gulp.task('babel', () => {
+  return gulp.src(paths.js)
+    .pipe(babel())
+    .pipe(jsMin())
+    .pipe(gulp.dest(`${paths.dest}/js`));
+});
 
 
 /**
@@ -60,7 +60,7 @@ gulp.task('html', ['sass'], () => {
 * compiles/minifies all on any change
 */
 gulp.task('watch', ['serve'], () => {
-  gulp.watch(`${paths.src}/**/*.{js,scss,html}`, ['sass', 'html', browser.reload]);
+  gulp.watch(`${paths.src}/**/*.{js,scss,html}`, ['sass', 'html', 'babel', browser.reload]);
 });
 
 
@@ -87,7 +87,7 @@ gulp.task('serve', () => {
 * uses run-sequence to run every task in order
 */
 gulp.task('build', () => {
-  return seq('sass', 'html', 'watch');
+  return seq('sass', 'html', 'babel', 'watch');
 });
 
 

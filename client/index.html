@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>SDG</title>
 
@@ -15,28 +15,30 @@
       <label for="fit-guide-tab" class="tab_label tab_label--fit-guide"><strong>Fit Guide</strong></label>
       <span class="tab_accordion">+</span>
 
-      <div class="tab_content">
+      <div class="tab_content tab_content--fit-guide-tab">
         <p>Integer vel arcu ac dolor tincidunt dapibus. Nam sit amet lacinia velit. Pellentesque vel urna diam. Nunc sit amet justo malesuada, tincidunt massa eu, placerat est. Suspendisse commodo pellentesque gravida. Donec suscipit vulputate odio, at eleifend purus condimentum in. Praesent sed cursus sem. Donec mattis urna efficitur diam sagittis, id maximus orci dictum. Etiam non congue felis, et varius augue. Aliquam et ullamcorper massa. Nullam interdum lobortis volutpat. Etiam leo arcu, vulputate vel commodo sit amet, ullamcorper varius dui.</p>
       </div>
     </div>
     <div class="tab">
       <input id="care-tab" name="tab-group" type="radio" />
       <label for="care-tab" class="tab_label tab_label--care"><strong>Care</strong></label>
-      <span class="tab_accordion--care-tab">+</span>
+      <span class="tab_accordion tab_accordion--care-tab">+</span>
 
 
       <div class="tab_content">
-        <p>Quisque a turpis fermentum, dapibus mauris quis, dignissim ligula. Aliquam aliquet tellus nunc, non fermentum leo dictum vel. Morbi vehicula laoreet felis ac blandit. Sed mi urna, feugiat nec rhoncus vitae, sollicitudin non dui. Vestibulum in porttitor urna, ut posuere elit. Suspendisse mi magna, molestie nec aliquam id, porttitor in ante. Nullam posuere ipsum odio, at placerat ante eleifend vitae. Suspendisse vestibulum magna pretium velit venenatis venenatis. Donec dapibus, justo ut aliquam varius, quam tortor dignissim tellus, imperdiet scelerisque risus ex ac magna. Nunc sed purus nibh. Phasellus elit erat, scelerisque sed volutpat non, interdum vitae urna.</p>
+        <div class="tab_content--care-tab">
+          <p>Quisque a turpis fermentum, dapibus mauris quis, dignissim ligula. Aliquam aliquet tellus nunc, non fermentum leo dictum vel. Morbi vehicula laoreet felis ac blandit. Sed mi urna, feugiat nec rhoncus vitae, sollicitudin non dui. Vestibulum in porttitor urna, ut posuere elit. Suspendisse mi magna, molestie nec aliquam id, porttitor in ante. Nullam posuere ipsum odio, at placerat ante eleifend vitae. Suspendisse vestibulum magna pretium velit venenatis venenatis. Donec dapibus, justo ut aliquam varius, quam tortor dignissim tellus, imperdiet scelerisque risus ex ac magna. Nunc sed purus nibh. Phasellus elit erat, scelerisque sed volutpat non, interdum vitae urna.</p>
+        </div>
       </div>
     </div>
     <div class="tab">
       <input id="materials-tab" name="tab-group" type="radio" />
       <label for="materials-tab" class="tab_label tab_label--materials"><strong>Materials</strong></label>
-      <span class="tab_accordion--materials-tab">+</span>
+      <span class="tab_accordion tab_accordion--materials-tab">+</span>
 
 
       <div class="tab_content">
-        <div class="material-percentages">
+        <div class="tab_content--materials-tab">
           <h1>50% cashmere</h1>
           <h1>46% wool</h1>
           <h1>4% modal</h1>
@@ -49,5 +51,6 @@
 
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="./js/sdg.js"></script>
 </body>
 </html>

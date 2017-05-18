@@ -4,7 +4,7 @@
       $('.tab .tab_content').slideUp(300).prop('checked', false);
   }
 
-  $('.tab').click(function(e) {
+  $('.tb').click(function(e) {
       console.log('clicked:', e.currentTarget);
       // Grab current anchor value
       let currentTabContent = $(e.currentTarget).children(".tab_content")[0];

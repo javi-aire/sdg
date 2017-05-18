@@ -36,19 +36,12 @@ body {
 ol, ul {
   list-style: none;
 }
-blockquote, q {
-  quotes: none;
+h1 {
+  font-size: 3.157em;
+  font-weight: 500;
+  opacity: .7;
+  text-align: center;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /*======= Tab Container ======*/
 .tab-container {
   position: relative;
@@ -162,10 +155,18 @@ table {
   position: absolute;
   background: white; /* necessary to hide other tab_content */
   overflow: hidden;
-  top: 8.05em;
+  top: 4em;
   left: 0;
   right: 0;
-  padding: 3.25em;
+  padding: 9em 0 3em 0;
+
+  &--fit-guide-tab {
+    padding: 6.75em 0 6em 0;
+  }
+
+  &--care-tab {
+    padding: 6.75em 0 6em 0;
+  }
 
   @media screen and (max-width: 39.06em){
     display: none;
@@ -181,3 +182,31 @@ table {
     margin-left: -4vw;
     letter-spacing: .0625em;
 */
+
+/*====== Materials Tab Content ======*/
+.mats_percent {
+  position: relative;
+  float: left;
+  cursor: pointer;
+  bottom: 2em;
+  right: 1em;
+  margin-left: 2em;
+
+  &:hover {
+    border-bottom: 1px solid #000;
+    transition: all linear 1.5s;
+  }
+}
+
+.mats {
+  font-size: 50%;
+  display: block;
+
+}
+
+.mats_info {
+  font-size: 0.81em;
+  float: left;
+  position: relative;
+  bottom: 5em;
+}

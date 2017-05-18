@@ -14,5 +14,5 @@ Browser-sync will inform you of the port, and you should be all set!
 
 Hope to hear from y'all soon.
 
-###### FYI
+### FYI
 -- See notes in sdg.js if complications occur.

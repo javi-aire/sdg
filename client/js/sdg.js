@@ -4,7 +4,7 @@
 * where the accordion and window/desktop
 * tabs work at the same time
 
-* to see both sides of the test
+* To see both sides of the test
 * (if i'm not already out of the running for the position)
 * please uncomment lines 21-30
 *

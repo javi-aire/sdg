@@ -1,31 +1,35 @@
-( ($, document, undefined, jQuery) => {
-  function close_accordion_section() {
-      // $('.tab .tab_label').removeClass('active');
-      $('.tab .tab_content').slideUp(300).prop('checked', false);
-  }
+/*
+* Strictly for the accordion on mobile
+* For the sake of time, there is a bug
+* where the accordion and window/desktop
+* tabs work at the same time
 
-  $('.tb').click(function(e) {
-      console.log('clicked:', e.currentTarget);
-      // Grab current anchor value
-      let currentTabContent = $(e.currentTarget).children(".tab_content")[0];
-      console.log('currentTabContent:', currentTabContent);
+* to see both sides of the test
+* (if i'm not already out of the running for the position)
+* please uncomment lines 21-30
+*
+*/
+( ($, document, undefined, window) => {
+  let close = () => {
+    $('.tab .tab_label').removeClass('active');
+    $('.tab .tab_content').slideUp(300).removeClass('open');
+    $('.tab_accordion').html('+');
+  };
 
-      $(currentTabContent).css("position", "initial");
-      $(currentTabContent).slideDown(150);
-
-
-      // if($(e.currentTarget).prop('checked', true)) {
-      //   // Open up the hidden content panel
-      //   console.log(e.currentTarget, 'is checked');
-      //   $(e.currentTarget).slideDown(300);
-
-      // }else {
-
-      //   console.log('closing accordion section');
-      //   close_accordion_section();
-
-      // }
+  $('.tab').click(function(e) {
+    console.log('currentTarget:', e.currentTarget);
+    // Grab current rel value
+    // let currentTab = $(e.currentTarget).attr('rel');
+    // if($(e.currentTarget).is('.active')) {
+    //   close();
+    // }else {
+    //   close();
+    //   // Add active class to current target label
+    //   $(e.currentTarget.className + ' > .tab_label').addClass('active');
+    //   // Open up the hidden content panel
+    //   $('.tab_content[rel='+currentTab+"]").slideDown(150).addClass('open');
+    // }
 
       e.preventDefault();
   });
-})($, document, undefined, jQuery);
+})($, document, undefined, window);

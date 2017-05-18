@@ -42,6 +42,7 @@ h1 {
   opacity: .7;
   text-align: center;
 }
+
 /*======= Tab Container ======*/
 .tab-container {
   position: relative;
@@ -130,6 +131,7 @@ h1 {
   }
 }
 
+/*====== Radio button ======*/
 [type=radio] {
   display: none;
 
@@ -150,7 +152,7 @@ h1 {
   }
 }
 
-
+/*======= Tab Content =======*/
 .tab_content {
   position: absolute;
   background: white; /* necessary to hide other tab_content */
@@ -170,15 +172,10 @@ h1 {
 
   @media screen and (max-width: 39.06em){
     display: none;
-    padding: .9375em;
+    padding: 7.75em 0 0 0;
+    position: inherit;
   }
 }
-
-/*
-======For actual content styling======
-    padding-bottom: 6em;
-    font-size: .81em;
-*/
 
 /*====== Materials Tab Content ======*/
 .mats_percent {
@@ -190,8 +187,12 @@ h1 {
   margin-left: 2em;
 
   &:hover {
-    border-bottom: 1px solid #000;
-    transition: all linear 1.5s;
+    border-bottom: .75px solid #000;
+  }
+
+  @media screen and (max-width: 39.06em){
+    margin-left: 0.5em;
+    right: 0.5em;
   }
 }
 
@@ -200,11 +201,17 @@ h1 {
   display: block;
 
 }
-
+/*==== Lorem ipsum in all three tabs ======*/
 .mats_info {
   font-size: 0.81em;
   float: left;
   position: relative;
   bottom: 5em;
   letter-spacing: .0525em;
+
+  @media screen and (max-width: 39.06em){
+    left: 1em;
+    width: 90%;
+    text-align: center;
+  }
 }
